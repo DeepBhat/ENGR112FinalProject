@@ -1,0 +1,17 @@
+%Barcode Strip 1
+
+
+[material1,number1] = barcode_scan();
+[m_type_one,t1_one,t2_one] = barcodeDecoder(material1,number1);
+fprintf('\nMaterial type, Type 1, Type 2: %s\nType 1 Number: %d\nType 2 Number: %d',m_type_one,t1_one,t2_one);
+
+fprintf('\n\n\n');
+
+[material1,number1] = barcode_scan();
+[m_type_two,t1_two,t2_two] = barcodeDecoder(material1,number1);
+fprintf('\nMaterial type, Type 1, Type 2: %s\nType 1 Number: %d\nType 2 Number: %d',m_type_two,t1_two,t2_two);
+
+file = fopen('Barcode_Scanner.txt','wt+');
+fprintf('%s\t%d\t%d\n',m_type_one,t1_one,t2_one);
+fprintf('%s\t%d\t%d\n',m_type_two,t1_two,t2_two);
+fclose(file);

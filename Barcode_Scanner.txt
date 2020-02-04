@@ -1,0 +1,2 @@
+2	Red Glass, Type 1: Large, Type 2: Small	3	1
+1	White Glass, Type 1: Large, Type 2: Small	2	2
